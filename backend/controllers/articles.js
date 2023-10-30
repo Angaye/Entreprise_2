@@ -18,7 +18,7 @@ exports.getOneArticle = (req, res, next) => {
 exports.createArticle = (req, res, next) => {
     model.Article.create({...req.body})    
         .then(() => res.status(201).json({message: "Nouvel article créé"}))
-        .catch(error => res.status(400).json({error}));
+        .catch(error => console.log(error));
 };
 
 //Requête PUT
